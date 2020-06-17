@@ -63,6 +63,8 @@ function attachScrollbar(el) {
     { passive: true }
   );
 
+  addEventListener("resize", () => updateScrollbar(el));
+
   content.addEventListener("scroll", scrollHandler, { paѕsive: true });
   el.appendChild(scrollbar);
   scrollHandler();
